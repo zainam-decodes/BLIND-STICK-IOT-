@@ -99,6 +99,7 @@ This project is inspired by the need for accessible assistive technology for the
 ## 📬 Contact Developer
 
 For questions or collaboration:
+- Zainab Jahan Umaima ( Undergrad 1st year(2024) at MCET)
 - 📧 Email: thezainabjahan14@gmail.com
 - 🌐 LinkedIn:
 
