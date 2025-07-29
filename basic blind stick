@@ -1,0 +1,57 @@
+// Pin Definitions
+const int trigPin = 9;
+const int echoPin = 10;
+const int buzzerPin = 5;
+const int vibMotorPin = 6;
+const int irSensorPin = 7;
+
+long duration;
+int distance;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(buzzerPin, OUTPUT);
+  pinMode(vibMotorPin, OUTPUT);
+  pinMode(irSensorPin, INPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  // IR Sensor Detection
+  int irValue = digitalRead(irSensorPin);
+  if (irValue == LOW) {
+    Serial.println("IR Obstacle Detected!");
+    digitalWrite(buzzerPin, HIGH);
+    digitalWrite(vibMotorPin, HIGH);
+    delay(500);
+    digitalWrite(buzzerPin, LOW);
+    digitalWrite(vibMotorPin, LOW);
+  }
+
+  // Ultrasonic Sensor Detection
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2;
+
+  Serial.print("Ultrasonic Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  if (distance < 50) {
+    digitalWrite(buzzerPin, HIGH);
+    digitalWrite(vibMotorPin, HIGH);
+  } else {
+    digitalWrite(buzzerPin, LOW);
+    digitalWrite(vibMotorPin, LOW);
+  }
+
+  delay(300);
+}
