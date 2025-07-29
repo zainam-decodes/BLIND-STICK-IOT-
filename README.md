@@ -2,7 +2,7 @@
 
 # 👁️ Smart Blind Stick for Visually Impaired
 
-This project is an IoT-based smart blind stick designed to assist visually impaired individuals in navigating their environment safely. The system integrates multiple sensors and image recognition capabilities using Arduino Uno and ESP32-CAM. Real-time alerts, obstacle classification, and navigational assistance are provided via the Blynk IoT platform.
+This project is an IoT-based smart blind stick designed to assist visually impaired individuals in navigating their environment safely. The system integrates multiple sensors and image recognition-Object recognition capabilities using Arduino Uno and ESP32-CAM. Real-time alerts, obstacle classification, and navigational assistance are provided via the Blynk IoT platform.
 
 ---
 
@@ -32,10 +32,12 @@ The smart blind stick detects obstacles such as humans, chairs, benches, vehicle
 ## 💡 Key Features
 
 - Real-time image capturing and obstacle detection
+- Object recognition using MobileNet SSD.
+- DFPlayer Mini audio navigation feedback.
+- SD card image saving when obstacles are detected.
 - Object recognition: identifies chairs, humans, vehicles, etc.
 - Obstacle distance measurement using sensors
 - Vibration feedback for close-range obstacles
-- Audio navigation guidance via speaker and microphone
 - Real-time notifications and object info sent to Blynk app
 - Works over Wi-Fi or Bluetooth using ESP32-CAM’s built-in modules
 
