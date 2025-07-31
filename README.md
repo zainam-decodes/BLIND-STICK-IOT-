@@ -28,6 +28,23 @@ The smart blind stick detects obstacles such as humans, chairs, benches, vehicle
 | Power Source (3.7V/5V Battery) | Portable power supply                   |
 
 ---
+## Software TechStack
+
+| Layer                       | Technologies/Tools Used                           |
+| --------------------------- | ------------------------------------------------- |
+| **Embedded Programming**    | Arduino IDE, C/C++                                |
+| **Microcontrollers**        | ESP32-CAM, Arduino Uno                            |
+| **Communication Protocols** | UART (Serial), I2C, Wi-Fi, Bluetooth              |
+| **Mobile App Integration**  | Blynk IoT (New Dashboard)                         |
+| **Object Detection Model**  | MobileNet SSD (pre-trained)                       |
+| **Audio Feedback System**   | DFPlayer Mini Library, MP3 Files                  |
+| **Image Capture & Storage** | ESP32-CAM, microSD File System                    |
+| **Data Handling**           | Sensor data processing via Arduino sketch         |
+| **Alerts & Notifications**  | Vibration, Sound (Buzzer), Blynk Notifications    |
+| **Development Tools**       | Arduino IDE, PlatformIO (optional), Blynk Console |
+| **Cloud Communication**     | Blynk Cloud API (Wi-Fi based alerts)              |
+
+---
 
 ## 💡 Key Features
 
